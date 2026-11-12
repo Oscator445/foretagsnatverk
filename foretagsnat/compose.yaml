@@ -1,0 +1,28 @@
+services:
+  client:
+    build: .
+    command: sleep infinity
+    networks:
+      - skolnat
+
+  server1:
+    build: .
+    command: sleep infinity
+    networks:
+      - skolnat
+
+  server2:
+    build: .
+    command: sleep infinity
+    networks:
+      - skolnat
+
+  backupserver:
+    build: .
+    command: sleep infinity
+    networks:
+      - skolnat
+
+networks:
+  skolnat:
+    driver: bridge
